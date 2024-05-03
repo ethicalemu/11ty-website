@@ -9,4 +9,4 @@ eleventyNavigation:
 
 # We are Ethical Emu, a _collaborative_{.highlight1}, _context-driven_{.highlight2}, _unﬂinchingly honest_{.highlight3} team working in software{.blockleft}
 
-<watermark />
+<img class="watermark" src="/assets/images/ethical-emu-watermark.svg" />

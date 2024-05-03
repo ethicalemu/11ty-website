@@ -1,6 +1,6 @@
 const { getPosts, getProjects } = require("./config/collections/index.js");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
-
+const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 function configureMarkdownIt() {
   // Reference: https://github.com/markdown-it/markdown-it-container/issues/23
   return require("markdown-it")({ html: true })
@@ -21,6 +21,7 @@ function configureMarkdownIt() {
 }
 
 module.exports = (eleventyConfig) => {
+  eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
   eleventyConfig.addCollection("posts", getPosts);
   eleventyConfig.addCollection("projects", getProjects);
   ["src/assets/fonts/", "src/assets/images/", "src/assets/css/"].forEach(
@@ -41,7 +42,7 @@ module.exports = (eleventyConfig) => {
     dataTemplateEngine: "njk",
 
     // Optional (default is set): If your site deploys to a subdirectory, change `pathPrefix`, for example with with GitHub pages
-    pathPrefix: "/",
+    pathPrefix: "11ty-website",
     dir: {
       input: "src",
       output: "dist",
