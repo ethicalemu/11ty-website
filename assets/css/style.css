@@ -1,4 +1,4 @@
-@import url("montserrat.css");
+@import "/assets/css/montserrat.css";
 
 :root {
   /* Colours */
@@ -99,9 +99,7 @@ h3 {
   background-color: var(--color-mid-orange);
 }
 
-watermark {
-  background-image: url("/assets/images/ethical-emu-watermark.svg");
-  background-repeat: no-repeat;
+.watermark {
   margin-right: 2rem;
   margin-left: 4rem;
   width: 40%;
