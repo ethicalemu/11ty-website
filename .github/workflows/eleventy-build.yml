@@ -34,7 +34,7 @@ jobs:
           key: ${{ runner.os }}-eleventy-fetch-cache
 
       - run: npm install --include=dev
-      - run: npx @11ty/eleventy
+      - run: npm run build-prod
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3

@@ -8,5 +8,12 @@
     "markdown-it": "^14.1.0",
     "markdown-it-attrs": "^4.1.6",
     "markdown-it-container": "^4.0.0"
+  },
+  "scripts": {
+    "build": "npx eleventy",
+    "serve": "npx eleventy --serve",
+    "debug": "DEBUG=* npx eleventy",
+    "build-prod": "env NODE_ENV=production npx eleventy --pathprefix '11ty-website'",
+    "test": "jest"
   }
 }
