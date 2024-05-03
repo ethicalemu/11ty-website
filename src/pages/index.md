@@ -1,6 +1,6 @@
 ---
 layout: main.njk
-title: My Rad Markdown Blog Post
+title: Ethical Emu
 permalink: /index.html
 eleventyNavigation:
   key: Home
