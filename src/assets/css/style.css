@@ -112,7 +112,7 @@ h3 {
   background-color: var(--color-header);
   display: flex;
   width: calc(100%-10px);
-  height: 36px;
+  height: auto;
   align-items: center;
   padding: 10px;
   margin-bottom: 2rem;
@@ -127,7 +127,7 @@ footer {
 }
 .logo {
   padding: 6px;
-  height: 70%;
+  height: 2rem;
 }
 
 footer .logo {
@@ -169,32 +169,54 @@ footer .address {
   font-weight: 500;
   font-size: large;
   font-family: "Montserrat";
-  margin: 20px;
+  margin: 15px;
   color: var(--color-header-link-text);
 }
 
 .container {
   display: flex;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
   width: 100%;
   overflow-x: hidden;
 }
 
-column {
-  width: calc((100% - 2.5rem) / 3);
-  margin-left: 6px;
-  margin-bottom: 10px;
+@media (min-width: 768px) {
+  column {
+    width: calc((100% - 2.5rem) / 3);
+    margin-left: 6px;
+    margin-bottom: 10px;
+  }
+  column > * {
+    padding: 0.4rem 0.4rem 0.4rem 0.6rem;
+  }
 }
 
-column p {
-  padding: 1rem;
+@media (max-width: 768px) {
+  column {
+    width: calc((100% - 2.5rem) / 2);
+    margin-left: 6px;
+    margin-bottom: 8px;
+  }
+  column > * {
+    padding: 0.4rem 0.4rem 0.4rem 0.6rem;
+  }
+}
+
+@media (max-width: 500px) {
+  column {
+    width: calc(100% - 2.5rem);
+    margin-left: 6px;
+    margin-bottom: 4px;
+  }
+  column > * {
+    padding: 0.4rem 0.4rem 0.4rem 0.6rem;
+  }
 }
 
 column h2 {
   color: var(--color-mid-orange);
   text-align: left;
   margin: 0;
-  padding: 1rem;
   border-radius: 0.4rem;
 }
 
