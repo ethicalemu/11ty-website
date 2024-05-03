@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<link rel="stylesheet" href="/assets/css/style.css" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png"><!-- 180×180 -->
+<link rel="icon" href="/icon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>{{title}}</title>
+	</head>
+	<body>
+        <div class="content">
+        <div class="navbar">
+        <img class="logo" src="/assets/images/ethical-emu-nav-logo.svg" alt="Ethical Emu Logo"/>
+
+        {% set navPages = collections.all | eleventyNavigation %}
+        <ul>
+        {%- for entry in navPages %}
+        <li{% if entry.url == page.url %} class="highlighted"{% endif %}>
+            <a href="{{ entry.url }}">{{ entry.title }}</a>
+        </li>
+        {%- endfor %}
+        </ul>
+        </div>
+		{{ content | safe }}
+        </div>
+	</body>
+    <footer>
+        <div class="address">
+            Korte Lijnbaanssteeg 1-4292 <br />
+            1012 SL Amsterdam <br />
+            Netherlands
+        </div>
+        <img class="logo" src="/assets/images/ethical-emu-logo.svg" alt="Ethical Emu Logo with Emu Head"/></footer>
+</html>

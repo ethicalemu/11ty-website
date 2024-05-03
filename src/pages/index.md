@@ -1,0 +1,12 @@
+---
+layout: main.njk
+title: My Rad Markdown Blog Post
+permalink: /index.html
+eleventyNavigation:
+  key: Home
+  order: 0
+---
+
+# We are Ethical Emu, a _collaborative_{.highlight1}, _context-driven_{.highlight2}, _unﬂinchingly honest_{.highlight3} team working in software{.blockleft}
+
+<watermark />

@@ -1,0 +1,12 @@
+{
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy-navigation": "^0.3.5",
+    "nunjucks": "^3.2.4"
+  },
+  "dependencies": {
+    "markdown-it": "^14.1.0",
+    "markdown-it-attrs": "^4.1.6",
+    "markdown-it-container": "^4.0.0"
+  }
+}
