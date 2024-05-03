@@ -103,7 +103,7 @@ h3 {
   margin-right: 2rem;
   margin-left: 4rem;
   width: 40%;
-  height: 33rem;
+  height: 30%;
   display: block;
   float: left;
 }
@@ -111,7 +111,7 @@ h3 {
 .navbar {
   background-color: var(--color-header);
   display: flex;
-  width: calc(100%-10px);
+  width: calc(100% - 20px);
   height: auto;
   align-items: center;
   padding: 10px;
@@ -169,7 +169,7 @@ footer .address {
   font-weight: 500;
   font-size: large;
   font-family: "Montserrat";
-  margin: 15px;
+  margin: 0.1rem;
   color: var(--color-header-link-text);
 }
 
