@@ -42,7 +42,7 @@ module.exports = (eleventyConfig) => {
     dataTemplateEngine: "njk",
 
     // Optional (default is set): If your site deploys to a subdirectory, change `pathPrefix`, for example with with GitHub pages
-    pathPrefix: "11ty-website",
+    // pathPrefix: "11ty-website",
     dir: {
       input: "src",
       output: "dist",
