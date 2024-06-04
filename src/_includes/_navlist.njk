@@ -1,0 +1,20 @@
+{% set navPages = collections.all | eleventyNavigation %}
+
+{% macro renderNavListItem(entry) %}
+  {% if entry.children.length %}
+    <li>
+      <a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page" class="highlighted" {% endif %}>{{ entry.title }}</a>
+        <ul>
+          {%- for child in entry.children %}{% if loop.index0 < 5 %}{{ renderNavListItem(child) }}{% endif %}{% endfor -%}
+        </ul>
+    </li>
+  {% else %}
+    <li>
+      <a href="{{ entry.url }}"{% if (entry.url == page.url) or (entry.parent.url in page.url) %} aria-current="page" class="highlighted" {% endif %}>{{ entry.title }}</a>
+    </li>
+  {%- endif -%}
+{%- endmacro %}
+
+<ul class="nav-list" role="list">
+{%- for entry in navPages %}{{ renderNavListItem(entry) }}{%- endfor -%}
+</ul>
