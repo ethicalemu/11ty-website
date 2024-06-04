@@ -12,11 +12,19 @@
 	</head>
 	<body>
         <div class="content">
-            <div class="navbar">
-                <img class="logo" src="/assets/images/ethical-emu-nav-logo.svg" alt="Ethical Emu Logo"/>
-                {% include "_navlist.njk" %}
-            </div>
-		    {{ content | safe }}
+        <div class="navbar">
+        <img class="logo" src="/assets/images/ethical-emu-nav-logo.svg" alt="Ethical Emu Logo"/>
+
+        {% set navPages = collections.all | eleventyNavigation %}
+        <ul>
+        {%- for entry in navPages %}
+        <li{% if entry.url == page.url %} class="highlighted"{% endif %}>
+            <a href="{{ entry.url }}">{{ entry.title }}</a>
+        </li>
+        {%- endfor %}
+        </ul>
+        </div>
+		{{ content | safe }}
         </div>
 	</body>
     <footer>
