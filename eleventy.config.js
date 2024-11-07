@@ -24,9 +24,12 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
   eleventyConfig.addCollection("posts", getPosts);
   eleventyConfig.addCollection("projects", getProjects);
-  ["src/assets/fonts/", "src/assets/images/", "src/assets/css/"].forEach(
-    (path) => eleventyConfig.addPassthroughCopy(path)
-  );
+  [
+    "src/assets/fonts/",
+    "src/assets/images/",
+    "src/assets/css/",
+    "src/assets/files",
+  ].forEach((path) => eleventyConfig.addPassthroughCopy(path));
   eleventyConfig.addPassthroughCopy({
     "src/assets/images/favicon/*": "/",
   });
