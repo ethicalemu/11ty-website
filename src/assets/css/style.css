@@ -124,6 +124,7 @@ footer {
   position: absolute;
   bottom: 0;
   width: calc(100%);
+  margin-top: 2rem;
 }
 .logo {
   padding: 6px;
@@ -223,4 +224,11 @@ column h2 {
 .bracketleft {
   border-radius: 0.3rem;
   border-left: solid 2px var(--color-yellow);
+}
+
+.zeeg-inline-widget {
+  height: 46rem;
+  width: 100%;
+  position: relative;
+  top: -2rem;
 }
