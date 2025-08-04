@@ -11,7 +11,7 @@ eleventyNavigation:
 ### If you do not see a time that works for you, please reach out to me directly and I'll be happy to work with you to find a time that meets your schedule.{.blockleft}
 
 <!-- Zeeg inline embed begins -->
-<div class="zeeg-inline-widget" id="zeeg-embed-ethical-emu">
+<div class="zeeg-inline-widget" id="zeeg-embed-ethical-emu-lets-chat">
 </div>
-<script type="text/javascript" src="https://assets.zeeg.me/embed.min.js" data-user="ethical-emu" async></script>
+<script type="text/javascript" src="https://assets.zeeg.me/embed.min.js" data-user="ethical-emu" data-event-type="lets-chat" data-redirect-parent="true" async></script>
 <!-- Zeeg inline embed ends -->
