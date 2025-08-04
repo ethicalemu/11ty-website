@@ -122,10 +122,11 @@ footer {
   background-color: var(--color-header);
   height: var(--footer-height);
   position: absolute;
-  bottom: 0;
   width: calc(100%);
+  bottom: -200px;
   margin-top: 2rem;
 }
+
 .logo {
   padding: 6px;
   height: 2rem;
